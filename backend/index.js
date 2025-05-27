@@ -1,7 +1,6 @@
 import express from 'express';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
-import path from 'path';
 import fs from 'fs/promises';
 
 const app = express();
@@ -32,7 +31,7 @@ const isUserWorking = async (dbPath) => {
         return rows.some(r => parseFloat(r.t1) === parseFloat(r.t2));
 
     } catch (err) {
-        console.error(`❌ Error reading ` + dbPath, err.message); // Log the error when reading the db
+        console.error(`❌ Error reading ` + dbPath, err.message); // Log when there is error reading the db
         return false; // Return false if there's an error when accessing the db
     }
 }
@@ -46,7 +45,7 @@ setInterval(async () => {
     }
     // Optional: Keep this log for basic confirmation of status updates
     console.log('✅ Refreshed status', userStatus);
-}, 10_000);
+}, 10_000); // 10 seconds
 
 app.listen(PORT, () => {
     console.log(`🚀 Status app listening at http://localhost:${PORT}`);
