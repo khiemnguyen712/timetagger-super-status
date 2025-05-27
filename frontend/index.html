@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Status Board</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 2rem; }
-    table { margin: 0 auto; border-collapse: collapse; }
-    th, td { padding: 1rem; border: 1px solid #ccc; }
-    .green { background: lightgreen; }
-    .gray { background: #eee; }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    .green {
+      background: lightgreen;
+    }
+
+    .gray {
+      background: #eee;
+    }
   </style>
 </head>
+
 <body>
   <table id="statusTable">
-    <thead><tr><th>User</th><th>Status</th></tr></thead>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Status</th>
+      </tr>
+    </thead>
     <tbody></tbody>
   </table>
 
@@ -36,4 +62,5 @@
     refresh(); // first load
   </script>
 </body>
+
 </html>
