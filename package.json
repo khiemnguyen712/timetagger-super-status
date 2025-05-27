@@ -1,0 +1,15 @@
+{
+  "name": "timetagger-status-app",
+  "version": "1.0.0",
+  "description": "Check user working status from TimeTagger SQLite DBs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.6"
+  }
+}
