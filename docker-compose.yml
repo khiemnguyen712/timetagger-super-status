@@ -1,0 +1,16 @@
+# F:/Repo/timetagger-super-status/docker-compose.yml
+version: "3.8"
+
+services:
+  super-status:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_PATH=/root/_timetagger/users/test~dGVzdA==.db
+    volumes:
+      - timetagger_db_volume:/root/_timetagger
+volumes:
+  timetagger_db_volume: # Internal name used by this compose file
+    name: timetagger_shared_db_volume # <--- Must match the actual Docker volume name
+    external: true
