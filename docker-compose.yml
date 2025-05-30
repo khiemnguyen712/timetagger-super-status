@@ -11,6 +11,6 @@ services:
     volumes:
       - timetagger_db_volume:/root/_timetagger
 volumes:
-  timetagger_db_volume: # Internal name used by this compose file
-    name: timetagger_shared_db_volume # <--- Must match the actual Docker volume name
-    external: true
+  timetagger_db_volume: # Volume key
+    name: timetagger_shared_db_volume # Volume shared with timetagger
+    external: true # Create no new volume
