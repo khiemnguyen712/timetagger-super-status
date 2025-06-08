@@ -10,4 +10,4 @@ Then `docker compose up` this one
 
 This app run on `localhost:8000`
 
-This app reads the SQLite in a volume created by TimeTagger
+This app reads the SQLite in a volume created by TimeTagger and display active status
