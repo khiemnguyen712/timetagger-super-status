@@ -1,6 +1,4 @@
-# F:/Repo/timetagger-super-status/docker-compose.yml
-version: "3.8"
-
+version: "3"
 services:
   super-status:
     build: .
@@ -9,8 +7,8 @@ services:
     environment:
       - DB_PATH=/root/_timetagger/users/test~dGVzdA==.db
     volumes:
-      - timetagger_db_volume:/root/_timetagger
+      - timetagger-test-volume:/root/_timetagger
+
 volumes:
-  timetagger_db_volume: # Volume key
-    name: timetagger_shared_db_volume # Volume shared with timetagger
-    external: true # Create no new volume
+  timetagger-test-volume:
+    external: true
